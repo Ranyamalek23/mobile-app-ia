@@ -1,0 +1,26 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.FormFit" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="fontFamily">@font/lato</item>
+    </style>
+
+    <style name="Theme.FormFit" parent="Base.Theme.FormFit" />
+    
+    <style name="App.Custom.Indicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@color/primaryGreen</item>
+
+    </style>
+
+    <style name="BottomNavigationShape" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">36dp</item>
+    </style>
+
+    <style name="SessionItemLayout" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">12dp</item>
+        <item name="backgroundColor">@color/primaryColor</item>
+    </style>
+</resources>

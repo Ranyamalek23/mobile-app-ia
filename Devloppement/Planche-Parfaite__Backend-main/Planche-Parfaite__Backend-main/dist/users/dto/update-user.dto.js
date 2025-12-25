@@ -1,0 +1,80 @@
+"use strict";
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateUserDto = void 0;
+const mapped_types_1 = require("@nestjs/mapped-types");
+const swagger_1 = require("@nestjs/swagger");
+const class_validator_1 = require("class-validator");
+const create_user_dto_1 = require("./create-user.dto");
+class UpdateUserDto extends (0, mapped_types_1.PartialType)(create_user_dto_1.CreateUserDto) {
+}
+exports.UpdateUserDto = UpdateUserDto;
+__decorate([
+    (0, swagger_1.ApiPropertyOptional)({ description: 'Nom complet de l’utilisateur' }),
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], UpdateUserDto.prototype, "name", void 0);
+__decorate([
+    (0, swagger_1.ApiPropertyOptional)({ description: 'Email unique de l’utilisateur' }),
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsEmail)(),
+    __metadata("design:type", String)
+], UpdateUserDto.prototype, "email", void 0);
+__decorate([
+    (0, swagger_1.ApiPropertyOptional)({ description: 'Téléphone de l’utilisateur (14 caractères max)' }),
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], UpdateUserDto.prototype, "telephone", void 0);
+__decorate([
+    (0, swagger_1.ApiPropertyOptional)({ description: 'Mot de passe non-hashé (à hasher avant la sauvegarde)' }),
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], UpdateUserDto.prototype, "password", void 0);
+__decorate([
+    (0, swagger_1.ApiPropertyOptional)({ description: 'Date de naissance (format YYYY-MM-DD)' }),
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], UpdateUserDto.prototype, "birthday", void 0);
+__decorate([
+    (0, swagger_1.ApiPropertyOptional)({ description: 'Pays de l’utilisateur' }),
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], UpdateUserDto.prototype, "country", void 0);
+__decorate([
+    (0, swagger_1.ApiPropertyOptional)({ description: 'Genre de l’utilisateur (Homme, Femme, etc.)' }),
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], UpdateUserDto.prototype, "gender", void 0);
+__decorate([
+    (0, swagger_1.ApiPropertyOptional)({ description: 'Poids de l’utilisateur en kilogrammes' }),
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsNumber)(),
+    __metadata("design:type", Number)
+], UpdateUserDto.prototype, "weight", void 0);
+__decorate([
+    (0, swagger_1.ApiPropertyOptional)({ description: 'Taille de l’utilisateur en centimètres' }),
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsNumber)(),
+    __metadata("design:type", Number)
+], UpdateUserDto.prototype, "height", void 0);
+__decorate([
+    (0, swagger_1.ApiPropertyOptional)({ description: 'Niveau de fitness (Débutant, Intermédiaire, Avancé, etc.)' }),
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], UpdateUserDto.prototype, "fitness_level", void 0);
+//# sourceMappingURL=update-user.dto.js.map

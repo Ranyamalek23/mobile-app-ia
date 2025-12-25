@@ -1,0 +1,42 @@
+<!-- res/layout/item_session.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="16dp"
+    style="@style/SessionItemLayout">
+
+    <!-- ImageView for the icon or image -->
+    <ImageView
+        android:id="@+id/sessionImage"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:src="@drawable/vector"
+        android:layout_marginEnd="16dp" />
+
+    <!-- Vertical LinearLayout for the TextViews -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/sessionDuration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Duration"
+            android:textStyle="bold"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/sessionDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date"
+            android:textSize="16sp"
+            android:textStyle="normal" />
+
+    </LinearLayout>
+
+</LinearLayout>
